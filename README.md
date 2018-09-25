@@ -1,3 +1,6 @@
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/the-simian/brite-sequencer.svg)](https://greenkeeper.io/)
+
 Lite-Brite
 
 ![image](https://user-images.githubusercontent.com/954596/37075783-10a83572-2199-11e8-8d3b-eab9839c9f5d.png)
