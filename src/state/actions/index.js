@@ -1,3 +1,3 @@
 import actionCreator from "./action-creator";
 
-export const somethingHere = actionCreator("SOMETHING_HERE");
+export const changePaletteColor = actionCreator("CHANGE_PALETTE_COLOR");

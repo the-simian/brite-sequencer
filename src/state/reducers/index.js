@@ -1,3 +1,4 @@
 import { combineReducers } from "redux";
+import palette from "./palette";
 
-export default combineReducers({});
+export default combineReducers({ palette });

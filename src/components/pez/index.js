@@ -2,7 +2,9 @@ import "./pez.css";
 
 import React, { Component } from "react";
 
-export default class Pez extends Component {
+import { connect } from "react-redux";
+
+class Pez extends Component {
   state = {
     color: "",
     colors: [
@@ -36,7 +38,7 @@ export default class Pez extends Component {
           const next = index + 1;
 
           this.setState({
-            color: colors[next] ? colors[next] : colors[0]
+            color: this.props.palette.selectedColor
           });
         }}
       >
@@ -53,3 +55,9 @@ export default class Pez extends Component {
     );
   }
 }
+
+export default connect(state => {
+  return {
+    palette: state.palette
+  };
+})(Pez);
