@@ -32,6 +32,7 @@ class Palette extends Component {
         {palette.colors.map((color, index) => {
           return (
             <PaletteColor
+              key={`palette=${color}`}
               color={color}
               selectedColor={palette.selectedColor}
               dispatch={dispatch}
