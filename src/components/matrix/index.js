@@ -11,21 +11,10 @@ const SPACING_SIZE = 3;
 export default class Matrix extends Component {
   constructor(props) {
     super(props);
-    this.state = { width: "0", height: "0", gridModel: [] };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.state = { width: 800, height: 600, gridModel: [] };
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateWindowDimensions);
-    this.updateWindowDimensions();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
     this.makePezGridModel();
   }
 
@@ -71,10 +60,6 @@ export default class Matrix extends Component {
   }
 
   render() {
-    if (!this.state.gridModel.length) {
-      this.makePezGridModel();
-    }
-
     const pezGrid = this.makePezGrid();
 
     return (
