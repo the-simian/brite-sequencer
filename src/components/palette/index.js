@@ -8,7 +8,7 @@ class PaletteColor extends Component {
   render() {
     const activeclass = "inactive";
     return (
-      <div onClick={this.selectPaletteColor}>
+      <div className="palette-color" onClick={this.selectPaletteColor}>
         <div className={`palette pez ${this.props.color} ${activeclass}`} />
       </div>
     );
@@ -35,15 +35,6 @@ export default class Palette extends Component {
     const { color } = this.state;
     return (
       <div className={`palette-frame`}>
-        <div
-          className={`pez ${color}`}
-          style={{
-            borderWidth: borderWidth,
-            width: size,
-            height: size,
-            margin: spacing
-          }}
-        />
         {this.state.colors.map((color, index) => {
           return <PaletteColor color={color} />;
         })}
