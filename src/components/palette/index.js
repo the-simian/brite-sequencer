@@ -24,26 +24,12 @@ class PaletteColor extends Component {
   }
 }
 class Palette extends Component {
-  state = {
-    color: "",
-    colors: [
-      "",
-      "white",
-      "yellow",
-      "red",
-      "purple",
-      "orange",
-      "green",
-      "pink",
-      "blue"
-    ]
-  };
   render() {
-    const { size, borderWidth, spacing, palette, dispatch } = this.props;
-    const { color } = this.state;
+    const { palette, dispatch } = this.props;
+
     return (
       <div className={`palette-frame`}>
-        {this.state.colors.map((color, index) => {
+        {palette.colors.map((color, index) => {
           return (
             <PaletteColor
               color={color}

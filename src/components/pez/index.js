@@ -6,18 +6,7 @@ import { connect } from "react-redux";
 
 class Pez extends Component {
   state = {
-    color: "",
-    colors: [
-      "",
-      "white",
-      "yellow",
-      "red",
-      "purple",
-      "orange",
-      "green",
-      "pink",
-      "blue"
-    ]
+    color: ""
   };
   render() {
     const { size, borderWidth, spacing } = this.props;
@@ -34,11 +23,8 @@ class Pez extends Component {
         }}
         onClick={() => {
           const { colors, color } = this.state;
-          const index = colors.indexOf(color);
-          const next = index + 1;
-
           this.setState({
-            color: this.props.palette.selectedColor
+            color: this.state.color ? "" : this.props.palette.selectedColor
           });
         }}
       >

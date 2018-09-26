@@ -1,13 +1,26 @@
 import createReducer from "./create-reducer";
 
 const initial = {
-  selectedColor: ""
+  selectedColor: "white",
+  colors: [
+    "white",
+    "yellow",
+    "red",
+    "purple",
+    "orange",
+    "green",
+    "pink",
+    "blue"
+  ]
 };
 
 const reducers = {
   CHANGE_PALETTE_COLOR: (state, value) => {
     return {
-      selectedColor: value
+      ...state,
+      ...{
+        selectedColor: value
+      }
     };
   }
 };
